@@ -1,0 +1,70 @@
+CRITICAL - 2024-02-18 01:41:45 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_pengumuman.php on line 23.
+ 1 APPPATH/Models/M_pengumuman.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_pengumuman.php', 23)
+ 2 APPPATH/Controllers/Informasi.php(54): App\Models\M_pengumuman->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Informasi->pengumuman_detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Informasi))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-18 11:57:48 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-18 11:58:11 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-18 11:58:53 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-18 11:59:15 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-18 11:59:27 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-18 14:46:35 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Pendaftaran.php on line 34.
+ 1 APPPATH/Controllers/Pendaftaran.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Controllers/Pendaftaran.php', 34)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Pendaftaran->daftar('10')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftaran))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-18 14:46:43 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Pendaftaran.php on line 34.
+ 1 APPPATH/Controllers/Pendaftaran.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Controllers/Pendaftaran.php', 34)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Pendaftaran->daftar('10')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftaran))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-18 16:48:45 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()

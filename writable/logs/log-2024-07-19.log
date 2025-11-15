@@ -1,0 +1,82 @@
+CRITICAL - 2024-07-19 02:32:30 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 02:33:27 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 05:33:08 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 06:02:28 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-19 14:28:04 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_pengumuman.php on line 23.
+ 1 APPPATH/Models/M_pengumuman.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_pengumuman.php', 23)
+ 2 APPPATH/Controllers/Informasi.php(54): App\Models\M_pengumuman->counter('perencanaan-dan-pengelolaan-keuangan-dalam-mewujudkan-keluarga-sejahtera')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Informasi->pengumuman_detail('perencanaan-dan-pengelolaan-keuangan-dalam-mewujudkan-keluarga-sejahtera')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Informasi))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-19 15:28:17 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /home/diskopukm/public_html/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /home/diskopukm/public_html/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'diskopukm_user', 'Zevv1sIK6fgV', 'diskopukm_db', 3306, '', 0)
+#1 /home/diskopukm/public_html/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /home/diskopukm/public_html/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/diskopukm/public_html/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/diskopukm/public_html/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/diskopukm/public_html/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/diskopukm/public_html/app/Controllers/Profile.php(28): CodeIgniter\BaseModel->first()
+#7 /home/diskopukm/public_html/system/CodeIgniter.php(942): App\Controllers\Profile->detail('regulasi-dasar-...')
+#8 /home/diskopukm/public_html/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#9 /home/diskopukm/public_html/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/diskopukm/public_html/public/index.php(42): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /home/diskopukm/public_html/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/diskopukm/public_html/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /home/diskopukm/public_html/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/diskopukm/public_html/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /home/diskopukm/public_html/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/diskopukm/public_html/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /home/diskopukm/public_html/app/Controllers/Profile.php(28): CodeIgniter\BaseModel->first()
+#6 /home/diskopukm/public_html/system/CodeIgniter.php(942): App\Controllers\Profile->detail('regulasi-dasar-...')
+#7 /home/diskopukm/public_html/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#8 /home/diskopukm/public_html/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/diskopukm/public_html/public/index.php(42): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-19 15:28:17 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `3fi_instansi`
+ LIMIT 1', [], false)
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/Profile.php(28): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Profile->detail('regulasi-dasar-hukum')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()

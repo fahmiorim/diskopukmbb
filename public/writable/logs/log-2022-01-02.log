@@ -1,0 +1,57 @@
+CRITICAL - 2022-01-02 11:51:37 --> Invalid file: v_web.php
+#0 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_web.php')
+#1 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Common.php(1097): CodeIgniter\View\View->render('v_web', Array, true)
+#2 C:\xampp\htdocs\ci4app\app\Controllers\Web.php(13): view('v_web', Array)
+#3 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Web->index()
+#4 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
+#5 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\ci4app\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-01-02 11:52:43 --> Invalid file: v_web.php
+#0 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_web.php')
+#1 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Common.php(1097): CodeIgniter\View\View->render('v_web', Array, true)
+#2 C:\xampp\htdocs\ci4app\app\Controllers\Web.php(13): view('v_web', Array)
+#3 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Web->index()
+#4 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
+#5 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\ci4app\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-01-02 11:52:46 --> Invalid file: v_web.php
+#0 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_web.php')
+#1 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Common.php(1097): CodeIgniter\View\View->render('v_web', Array, true)
+#2 C:\xampp\htdocs\ci4app\app\Controllers\Web.php(13): view('v_web', Array)
+#3 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Web->index()
+#4 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
+#5 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\ci4app\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-01-02 12:33:16 --> Undefined variable: setting
+#0 C:\xampp\htdocs\ci4app\app\Views\v_web.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 18, Array)
+#1 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Common.php(1097): CodeIgniter\View\View->render('v_web', Array, true)
+#4 C:\xampp\htdocs\ci4app\app\Controllers\Web.php(13): view('v_web', Array)
+#5 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Web->index()
+#6 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
+#7 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4app\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-01-02 23:06:06 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-01-02 23:06:06 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\ci4app\app\Models\M_Auth.php(20): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\ci4app\app\Controllers\Auth.php(115): App\Models\M_Auth->login('afasdsa', 'qwqwq')
+#4 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Auth->cek_login()
+#5 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#6 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ci4app\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ci4app\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}

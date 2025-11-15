@@ -1,0 +1,52 @@
+CRITICAL - 2023-12-06 01:24:30 --> Too few arguments to function App\Controllers\Galeri::video_detail(), 0 passed in /home/diskopukm/public_html/system/CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH/Controllers/Galeri.php on line 69.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Galeri->video_detail()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-06 03:36:52 --> Too few arguments to function App\Controllers\Galeri::video_detail(), 0 passed in /home/diskopukm/public_html/system/CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH/Controllers/Galeri.php on line 69.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Galeri->video_detail()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-06 14:16:43 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('pelatihan-peningkatan-kelembagaan-koperasi')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('pelatihan-peningkatan-kelembagaan-koperasi')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-06 15:06:16 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_pengumuman.php on line 23.
+ 1 APPPATH/Models/M_pengumuman.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_pengumuman.php', 23)
+ 2 APPPATH/Controllers/Informasi.php(54): App\Models\M_pengumuman->counter('panduan-praktis-ternak-ayam-kampung-untuk-usaha-mikro-menengah-dan-koperasi')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Informasi->pengumuman_detail('panduan-praktis-ternak-ayam-kampung-untuk-usaha-mikro-menengah-dan-koperasi')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Informasi))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-06 15:14:29 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_pengumuman.php on line 23.
+ 1 APPPATH/Models/M_pengumuman.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_pengumuman.php', 23)
+ 2 APPPATH/Controllers/Informasi.php(54): App\Models\M_pengumuman->counter('perkembangan-data-usaha-mikro-kecil-menengah-umkm-dan-usaha-besar-ub-tahun')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Informasi->pengumuman_detail('perkembangan-data-usaha-mikro-kecil-menengah-umkm-dan-usaha-besar-ub-tahun')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Informasi))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-06 19:02:03 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_pengumuman.php on line 23.
+ 1 APPPATH/Models/M_pengumuman.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_pengumuman.php', 23)
+ 2 APPPATH/Controllers/Informasi.php(54): App\Models\M_pengumuman->counter('10')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Informasi->pengumuman_detail('10')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Informasi))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-06 19:03:56 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_pengumuman.php on line 23.
+ 1 APPPATH/Models/M_pengumuman.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_pengumuman.php', 23)
+ 2 APPPATH/Controllers/Informasi.php(54): App\Models\M_pengumuman->counter('analisa-mengenai-pailit-dengan-berdasarkan-pendapat-ibnu-rusyd-dan-juga-perbandingannya-dengan-penerapan-hukum-kepailitan-yang-ada-di-indonesia')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Informasi->pengumuman_detail('analisa-mengenai-pailit-dengan-berdasarkan-pendapat-ibnu-rusyd-dan-juga-perbandingannya-dengan-penerapan-hukum-kepailitan-yang-ada-di-indonesia')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Informasi))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()

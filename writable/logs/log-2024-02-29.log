@@ -1,0 +1,107 @@
+CRITICAL - 2024-02-29 00:48:13 --> Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes)
+in SYSTEMPATH/Language/Language.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-29 04:03:13 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-29 04:37:40 --> Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes)
+in SYSTEMPATH/Language/Language.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-29 05:46:21 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-29 08:05:51 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_pengumuman.php on line 23.
+ 1 APPPATH/Models/M_pengumuman.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_pengumuman.php', 23)
+ 2 APPPATH/Controllers/Informasi.php(54): App\Models\M_pengumuman->counter('hasil-ujian-test-akademik-rekrutmen-calon-ppkl-2022')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Informasi->pengumuman_detail('hasil-ujian-test-akademik-rekrutmen-calon-ppkl-2022')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Informasi))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-29 08:40:05 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('mengatasi-pinjaman-bermasalah-anggota-peminjam')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('mengatasi-pinjaman-bermasalah-anggota-peminjam')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-29 08:45:06 --> Too few arguments to function App\Controllers\Galeri::video_detail(), 0 passed in /home/diskopukm/public_html/system/CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH/Controllers/Galeri.php on line 69.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Galeri->video_detail()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-29 09:02:03 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_pengumuman.php on line 23.
+ 1 APPPATH/Models/M_pengumuman.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_pengumuman.php', 23)
+ 2 APPPATH/Controllers/Informasi.php(54): App\Models\M_pengumuman->counter('hasil-ujian-test-akademik-rekrutmen-calon-ppkl-2022')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Informasi->pengumuman_detail('hasil-ujian-test-akademik-rekrutmen-calon-ppkl-2022')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Informasi))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-29 10:29:56 --> Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes)
+in SYSTEMPATH/Language/Language.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-29 14:59:37 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-29 15:28:29 --> Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes)
+in SYSTEMPATH/Language/Language.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-29 15:30:40 --> Trying to access array offset on value of type null
+in APPPATH/Views/front/v_video_detail.php on line 13.
+ 1 APPPATH/Views/front/v_video_detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Views/front/v_video_detail.php', 13)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/diskopukm/public_html/app/Views/front/v_video_detail.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('front/v_video_detail.php', [], true)
+ 5 APPPATH/Views/front/layout/v_content.php(3): view('front/v_video_detail.php')
+ 6 SYSTEMPATH/View/View.php(228): include('/home/diskopukm/public_html/app/Views/front/layout/v_content.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('front/layout/v_content.php', [], true)
+ 9 APPPATH/Views/front/layout/v_wrapper.php(5): view('front/layout/v_content.php')
+10 SYSTEMPATH/View/View.php(228): include('/home/diskopukm/public_html/app/Views/front/layout/v_wrapper.php')
+11 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('front/layout/v_wrapper', [], true)
+13 APPPATH/Controllers/Galeri.php(80): view('front/layout/v_wrapper', [...])
+14 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Galeri->video_detail('frontend', 'assets', 'css', 'float.css')
+15 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+16 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-29 16:43:53 --> Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes)
+in SYSTEMPATH/Language/Language.php on line 197.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-29 23:31:16 --> Trying to access array offset on value of type null
+in APPPATH/Views/front/v_foto_detail.php on line 5.
+ 1 APPPATH/Views/front/v_foto_detail.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Views/front/v_foto_detail.php', 5)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/diskopukm/public_html/app/Views/front/v_foto_detail.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('front/v_foto_detail.php', [], true)
+ 5 APPPATH/Views/front/layout/v_content.php(3): view('front/v_foto_detail.php')
+ 6 SYSTEMPATH/View/View.php(228): include('/home/diskopukm/public_html/app/Views/front/layout/v_content.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('front/layout/v_content.php', [], true)
+ 9 APPPATH/Views/front/layout/v_wrapper.php(5): view('front/layout/v_content.php')
+10 SYSTEMPATH/View/View.php(228): include('/home/diskopukm/public_html/app/Views/front/layout/v_wrapper.php')
+11 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('front/layout/v_wrapper', [], true)
+13 APPPATH/Controllers/Galeri.php(51): view('front/layout/v_wrapper', [...])
+14 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Galeri->foto_detail('frontend', 'assets', 'css', 'float.css')
+15 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+16 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,27 @@
+ERROR - 2025-11-15 05:36:23 --> User not active: diskopukm
+ERROR - 2025-11-15 05:38:27 --> Invalid password for user: diskopukm
+ERROR - 2025-11-15 05:38:33 --> Invalid password for user: diskopukm
+ERROR - 2025-11-15 05:40:16 --> User not found: admin
+ERROR - 2025-11-15 05:41:33 --> Invalid password for user: diskopukm
+ERROR - 2025-11-15 05:42:13 --> Invalid password for user: diskopukm
+ERROR - 2025-11-15 05:46:17 --> Invalid password for user: diskopukm
+CRITICAL - 2025-11-15 05:56:30 --> Access denied for user 'diskopukm_user'@'localhost' (using password: YES)
+in APPPATH\Views\admin\pelatihan\v_lists.php on line 49.
+ 1 APPPATH\Views\admin\pelatihan\v_lists.php(49): mysqli_connect('localhost', 'diskopukm_user', 'oyFABEpu2n', 'diskopukm_db')
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\diskopukm\\app\\Views\\admin\\pelatihan\\v_lists.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/pelatihan/v_lists', [], true)
+ 5 APPPATH\Views\admin\layout\v_content.php(3): view('admin/pelatihan/v_lists')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\diskopukm\\app\\Views\\admin\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/layout/v_content.php', [], true)
+ 9 APPPATH\Views\admin\layout\v_wrapper.php(5): view('admin/layout/v_content.php')
+10 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\diskopukm\\app\\Views\\admin\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Admin\Pelatihan.php(74): view('admin/layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\Pelatihan->index()
+15 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Pelatihan))
+16 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(42): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\diskopukm\\public\\index.php')

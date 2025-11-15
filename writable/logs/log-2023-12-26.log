@@ -1,0 +1,24 @@
+CRITICAL - 2023-12-26 07:07:47 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('tugas-fungsi')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('tugas-fungsi')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-26 15:21:23 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_pengumuman.php on line 23.
+ 1 APPPATH/Models/M_pengumuman.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_pengumuman.php', 23)
+ 2 APPPATH/Controllers/Informasi.php(54): App\Models\M_pengumuman->counter('perencanaan-dan-pengelolaan-keuangan-dalam-mewujudkan-keluarga-sejahtera')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Informasi->pengumuman_detail('perencanaan-dan-pengelolaan-keuangan-dalam-mewujudkan-keluarga-sejahtera')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Informasi))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-26 23:30:06 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_pengumuman.php on line 23.
+ 1 APPPATH/Models/M_pengumuman.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukm/public_html/app/Models/M_pengumuman.php', 23)
+ 2 APPPATH/Controllers/Informasi.php(54): App\Models\M_pengumuman->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Informasi->pengumuman_detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Informasi))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()

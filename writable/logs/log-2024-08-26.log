@@ -1,0 +1,104 @@
+CRITICAL - 2024-08-26 00:33:32 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukmbb/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-26 02:29:29 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukmbb/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-26 02:37:35 --> Trying to access array offset on value of type null
+in APPPATH/Models/M_berita.php on line 23.
+ 1 APPPATH/Models/M_berita.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukmbb/public_html/app/Models/M_berita.php', 23)
+ 2 APPPATH/Controllers/Berita.php(55): App\Models\M_berita->counter('frontend')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Berita->detail('frontend', 'assets', 'css', 'float.css')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-26 04:18:42 --> Trying to access array offset on value of type null
+in APPPATH/Views/front/v_foto_detail.php on line 5.
+ 1 APPPATH/Views/front/v_foto_detail.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukmbb/public_html/app/Views/front/v_foto_detail.php', 5)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/diskopukmbb/public_html/app/Views/front/v_foto_detail.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('front/v_foto_detail.php', [], true)
+ 5 APPPATH/Views/front/layout/v_content.php(3): view('front/v_foto_detail.php')
+ 6 SYSTEMPATH/View/View.php(228): include('/home/diskopukmbb/public_html/app/Views/front/layout/v_content.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('front/layout/v_content.php', [], true)
+ 9 APPPATH/Views/front/layout/v_wrapper.php(5): view('front/layout/v_content.php')
+10 SYSTEMPATH/View/View.php(228): include('/home/diskopukmbb/public_html/app/Views/front/layout/v_wrapper.php')
+11 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('front/layout/v_wrapper', [], true)
+13 APPPATH/Controllers/Galeri.php(51): view('front/layout/v_wrapper', [...])
+14 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Galeri->foto_detail('frontend', 'assets', 'css', 'float.css')
+15 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+16 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-26 04:19:38 --> Trying to access array offset on value of type null
+in APPPATH/Views/front/v_foto_detail.php on line 5.
+ 1 APPPATH/Views/front/v_foto_detail.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/home/diskopukmbb/public_html/app/Views/front/v_foto_detail.php', 5)
+ 2 SYSTEMPATH/View/View.php(228): include('/home/diskopukmbb/public_html/app/Views/front/v_foto_detail.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('front/v_foto_detail.php', [], true)
+ 5 APPPATH/Views/front/layout/v_content.php(3): view('front/v_foto_detail.php')
+ 6 SYSTEMPATH/View/View.php(228): include('/home/diskopukmbb/public_html/app/Views/front/layout/v_content.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('front/layout/v_content.php', [], true)
+ 9 APPPATH/Views/front/layout/v_wrapper.php(5): view('front/layout/v_content.php')
+10 SYSTEMPATH/View/View.php(228): include('/home/diskopukmbb/public_html/app/Views/front/layout/v_wrapper.php')
+11 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('front/layout/v_wrapper', [], true)
+13 APPPATH/Controllers/Galeri.php(51): view('front/layout/v_wrapper', [...])
+14 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Galeri->foto_detail('frontend', 'assets', 'css', 'float.css')
+15 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+16 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-08-26 04:20:04 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'diskopukmbb_user'@'localhost'. Account is locked. in /home/diskopukmbb/public_html/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /home/diskopukmbb/public_html/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'diskopukmbb_use...', '$YaTP[[3wjBD', 'diskopukmbb_db', 3306, '', 0)
+#1 /home/diskopukmbb/public_html/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /home/diskopukmbb/public_html/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/diskopukmbb/public_html/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/diskopukmbb/public_html/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/diskopukmbb/public_html/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/diskopukmbb/public_html/app/Controllers/Galeri.php(27): CodeIgniter\BaseModel->first()
+#7 /home/diskopukmbb/public_html/system/CodeIgniter.php(942): App\Controllers\Galeri->foto()
+#8 /home/diskopukmbb/public_html/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#9 /home/diskopukmbb/public_html/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/diskopukmbb/public_html/public/index.php(42): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost'. Account is locked. in /home/diskopukmbb/public_html/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/diskopukmbb/public_html/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /home/diskopukmbb/public_html/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/diskopukmbb/public_html/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /home/diskopukmbb/public_html/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/diskopukmbb/public_html/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /home/diskopukmbb/public_html/app/Controllers/Galeri.php(27): CodeIgniter\BaseModel->first()
+#6 /home/diskopukmbb/public_html/system/CodeIgniter.php(942): App\Controllers\Galeri->foto()
+#7 /home/diskopukmbb/public_html/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#8 /home/diskopukmbb/public_html/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/diskopukmbb/public_html/public/index.php(42): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-08-26 04:20:04 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost'. Account is locked.
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `3fi_instansi`
+ LIMIT 1', [], false)
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/Galeri.php(27): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Galeri->foto()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()

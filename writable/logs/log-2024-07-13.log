@@ -1,0 +1,6 @@
+CRITICAL - 2024-07-13 02:44:52 --> Too few arguments to function App\Controllers\Perizinan::detail(), 0 passed in /home/diskopukm/public_html/system/CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH/Controllers/Perizinan.php on line 24.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Perizinan->detail()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perizinan))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(42): CodeIgniter\CodeIgniter->run()

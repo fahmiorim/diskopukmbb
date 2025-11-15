@@ -1,0 +1,157 @@
+ERROR - 2022-01-14 01:41:07 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-01-14 01:41:07 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\it-project\app\Models\M_berita.php(11): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\it-project\app\Controllers\Berita.php(20): App\Models\M_berita->get_berita()
+#4 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Berita->index()
+#5 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Berita))
+#6 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\it-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-01-14 04:10:05 --> Invalid file: admin/slideshow/v_lists.php
+#0 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/slideshow...')
+#1 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Common.php(1097): CodeIgniter\View\View->render('admin/slideshow...', Array, true)
+#2 C:\xampp\htdocs\it-project\app\Views\admin\layout\v_content.php(3): view('admin/slideshow...')
+#3 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Common.php(1097): CodeIgniter\View\View->render('admin/layout/v_...', Array, true)
+#6 C:\xampp\htdocs\it-project\app\Views\admin\layout\v_wrapper.php(5): view('admin/layout/v_...')
+#7 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Common.php(1097): CodeIgniter\View\View->render('admin/layout/v_...', Array, true)
+#10 C:\xampp\htdocs\it-project\app\Controllers\Slideshow.php(13): view('admin/layout/v_...', Array)
+#11 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Slideshow->index()
+#12 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slideshow))
+#13 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\it-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2022-01-14 04:24:39 --> Undefined variable: slideshow
+#0 C:\xampp\htdocs\it-project\app\Views\admin\slideshow\v_lists.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Common.php(1097): CodeIgniter\View\View->render('admin/slideshow...', Array, true)
+#4 C:\xampp\htdocs\it-project\app\Views\admin\layout\v_content.php(3): view('admin/slideshow...')
+#5 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Common.php(1097): CodeIgniter\View\View->render('admin/layout/v_...', Array, true)
+#8 C:\xampp\htdocs\it-project\app\Views\admin\layout\v_wrapper.php(5): view('admin/layout/v_...')
+#9 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#11 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Common.php(1097): CodeIgniter\View\View->render('admin/layout/v_...', Array, true)
+#12 C:\xampp\htdocs\it-project\app\Controllers\Slideshow.php(13): view('admin/layout/v_...', Array)
+#13 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Slideshow->index()
+#14 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slideshow))
+#15 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#16 C:\xampp\htdocs\it-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#17 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#18 {main}
+CRITICAL - 2022-01-14 04:25:28 --> Undefined property: App\Controllers\Slideshow::$M_slideshow
+#0 C:\xampp\htdocs\it-project\app\Controllers\Slideshow.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Slideshow->index()
+#2 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slideshow))
+#3 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\it-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-01-14 04:26:45 --> Undefined property: App\Controllers\Slideshow::$M_slideshow
+#0 C:\xampp\htdocs\it-project\app\Controllers\Slideshow.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Slideshow->index()
+#2 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slideshow))
+#3 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\it-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-01-14 04:26:46 --> Undefined property: App\Controllers\Slideshow::$M_slideshow
+#0 C:\xampp\htdocs\it-project\app\Controllers\Slideshow.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Slideshow->index()
+#2 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slideshow))
+#3 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\it-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-01-14 04:26:46 --> Undefined property: App\Controllers\Slideshow::$M_slideshow
+#0 C:\xampp\htdocs\it-project\app\Controllers\Slideshow.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Slideshow->index()
+#2 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slideshow))
+#3 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\it-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-01-14 04:26:46 --> Undefined property: App\Controllers\Slideshow::$M_slideshow
+#0 C:\xampp\htdocs\it-project\app\Controllers\Slideshow.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Slideshow->index()
+#2 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slideshow))
+#3 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\it-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-01-14 04:26:46 --> Undefined property: App\Controllers\Slideshow::$M_slideshow
+#0 C:\xampp\htdocs\it-project\app\Controllers\Slideshow.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Slideshow->index()
+#2 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slideshow))
+#3 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\it-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-01-14 04:26:47 --> Undefined property: App\Controllers\Slideshow::$M_slideshow
+#0 C:\xampp\htdocs\it-project\app\Controllers\Slideshow.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Slideshow->index()
+#2 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slideshow))
+#3 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\it-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-01-14 04:26:47 --> Undefined property: App\Controllers\Slideshow::$M_slideshow
+#0 C:\xampp\htdocs\it-project\app\Controllers\Slideshow.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Slideshow->index()
+#2 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slideshow))
+#3 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\it-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-01-14 04:28:55 --> Undefined index: id_berita
+#0 C:\xampp\htdocs\it-project\app\Views\admin\slideshow\v_lists.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 48, Array)
+#1 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Common.php(1097): CodeIgniter\View\View->render('admin/slideshow...', Array, true)
+#4 C:\xampp\htdocs\it-project\app\Views\admin\layout\v_content.php(3): view('admin/slideshow...')
+#5 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Common.php(1097): CodeIgniter\View\View->render('admin/layout/v_...', Array, true)
+#8 C:\xampp\htdocs\it-project\app\Views\admin\layout\v_wrapper.php(5): view('admin/layout/v_...')
+#9 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#11 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Common.php(1097): CodeIgniter\View\View->render('admin/layout/v_...', Array, true)
+#12 C:\xampp\htdocs\it-project\app\Controllers\Slideshow.php(22): view('admin/layout/v_...', Array)
+#13 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Slideshow->index()
+#14 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slideshow))
+#15 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#16 C:\xampp\htdocs\it-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#17 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#18 {main}
+CRITICAL - 2022-01-14 04:53:01 --> Trying to get property 'gambar' of non-object
+#0 C:\xampp\htdocs\it-project\app\Views\admin\slideshow\v_lists.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 44, Array)
+#1 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Common.php(1097): CodeIgniter\View\View->render('admin/slideshow...', Array, true)
+#4 C:\xampp\htdocs\it-project\app\Views\admin\layout\v_content.php(3): view('admin/slideshow...')
+#5 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Common.php(1097): CodeIgniter\View\View->render('admin/layout/v_...', Array, true)
+#8 C:\xampp\htdocs\it-project\app\Views\admin\layout\v_wrapper.php(5): view('admin/layout/v_...')
+#9 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#11 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Common.php(1097): CodeIgniter\View\View->render('admin/layout/v_...', Array, true)
+#12 C:\xampp\htdocs\it-project\app\Controllers\Slideshow.php(22): view('admin/layout/v_...', Array)
+#13 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(824): App\Controllers\Slideshow->index()
+#14 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slideshow))
+#15 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#16 C:\xampp\htdocs\it-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#17 C:\xampp\htdocs\it-project\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#18 {main}
