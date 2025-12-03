@@ -1,5 +1,6 @@
 <div class="container">
     <form class="row" role="form" action="<?= base_url('admin/pelatihan/peserta_save/'); ?>" method="post" enctype="multipart/form-data">
+        <?= csrf_field() ?>
         <div class="col-lg-4">
             <div class="card mb-4">
                 <?php foreach ($data_peserta as $key => $value) { ?>
@@ -503,7 +504,7 @@
                             <?php foreach ($social_media as $key => $value) { ?>
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox" name="sosmed_kode[]" value="<?= $value['sosmed_kode']; ?>" <?php if ($value['sosmed_kode'] == old($value['sosmed_kode'])) echo "checked" ?>>
+                                        <input class="form-check-input" type="checkbox" name="sosmed_kode[]" value="<?= $value['social_media_name']; ?>" <?= (in_array($value['social_media_name'], old('sosmed_kode', []))) ? 'checked' : '' ?>>
                                         <?= $value['social_media_name']; ?>
                                     </label>
                                 </div>
@@ -516,7 +517,7 @@
                             <?php foreach ($marketplace as $key => $value) { ?>
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox" value="<?= $value['marketplace_kode'] ?>" <?php if ($value['marketplace_kode'] == old($value['marketplace_kode'])) echo "checked" ?> name="marketplace_kode[]">
+                                        <input class="form-check-input" type="checkbox" name="marketplace_kode[]" value="<?= $value['marketplace_kode'] ?>" <?php if ($value['marketplace_kode'] == old($value['marketplace_kode'])) echo "checked" ?>>
                                         <?= $value['marketplace_name'] ?>
                                     </label>
                                 </div>

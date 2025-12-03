@@ -11,6 +11,13 @@ use App\Models\M_datakopukm;
 
 class Umkm extends BaseController
 {
+    protected $M_profile;
+    protected $M_perizinan;
+    protected $M_settings;
+    protected $M_izin;
+    protected $M_edu;
+    protected $M_datakopukm;
+    protected $db;
 
 
     public function __construct()
@@ -59,7 +66,7 @@ class Umkm extends BaseController
             'title' => 'Data UKM',
             'menu' => 'umkm',
             'title2' => $this->M_settings->first(),
-            'datakopukm' => $this->M_datakopukm->findAll(),
+            'dataukm' => $this->M_datakopukm->where('business_status_name', 'UMKM')->orderBy('data_id', 'DESC')->findAll(),
             'isi' => 'admin/ukm/v_lists',
         );
         echo view('admin/layout/v_wrapper', $data);
@@ -74,6 +81,67 @@ class Umkm extends BaseController
             'isi' => 'admin/ukm/v_tambah',
         );
         echo view('admin/layout/v_wrapper', $data);
+    }
+
+    public function data_edit($id_number = null)
+    {
+        if ($id_number === null) {
+            return redirect()->to(base_url('admin/umkm/data'))->with('error', 'ID UMKM tidak valid');
+        }
+
+        $data = array(
+            'title' => 'Edit Data UMKM',
+            'menu' => 'umkm',
+            'title2' => $this->M_settings->first(),
+            'umkm' => $this->M_datakopukm->where('id_number', $id_number)->first(),
+            'isi' => 'admin/ukm/v_edit',
+        );
+
+        if (empty($data['umkm'])) {
+            return redirect()->to(base_url('admin/umkm/data'))->with('error', 'Data UMKM tidak ditemukan');
+        }
+
+        echo view('admin/layout/v_wrapper', $data);
+    }
+
+    public function data_update($id_number = null)
+    {
+        if ($id_number === null) {
+            return redirect()->to(base_url('admin/umkm/data'))->with('error', 'ID UMKM tidak valid');
+        }
+
+        // Validate the form data
+        $validation = $this->validate([
+            'name_umkm' => 'required',
+            'address_umkm' => 'required',
+            'districts_city_name' => 'required',
+            'phone_number' => 'required',
+            'email' => 'valid_email',
+        ]);
+
+        if (!$validation) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
+
+        // Prepare the data for update
+        $data = [
+            'name_umkm' => $this->request->getPost('name_umkm'),
+            'address_umkm' => $this->request->getPost('address_umkm'),
+            'districts_city_name' => $this->request->getPost('districts_city_name'),
+            'phone_number' => $this->request->getPost('phone_number'),
+            'email' => $this->request->getPost('email'),
+            'nib_umkm' => $this->request->getPost('nib_umkm'),
+            'npwp_umkm' => $this->request->getPost('npwp_umkm'),
+        ];
+
+        // Update the data
+        $updated = $this->M_datakopukm->where('id_number', $id_number)->set($data)->update();
+
+        if ($updated) {
+            return redirect()->to(base_url('admin/umkm/data'))->with('success', 'Data UMKM berhasil diperbarui');
+        } else {
+            return redirect()->back()->with('error', 'Gagal memperbarui data UMKM')->withInput();
+        }
     }
 
     public function perizinan()
@@ -92,11 +160,22 @@ class Umkm extends BaseController
     {
         $data = array(
             'title' => 'Tambah Data',
-            'menu' => 'UKM',
+            'menu' => 'UMKM',
             'title2' => $this->M_settings->first(),
             'isi' => 'admin/perizinan/v_tambah',
         );
         echo view('admin/layout/v_wrapper', $data);
+    }
+
+    public function bantuan()
+    {
+        $data = [
+            'title' => 'Bantuan',
+            'menu' => 'umkm',
+            'title2' => $this->M_settings->first(),
+            'isi' => 'admin/ukm/v_bantuan',
+        ];
+        return view('admin/layout/v_wrapper', $data);
     }
 
     public function perizinan_save()
@@ -450,6 +529,29 @@ class Umkm extends BaseController
             'isi' => 'admin/eduukm/v_edit',
         );
         echo view('admin/layout/v_wrapper', $data);
+    }
+
+    public function edu_delete($id = null)
+    {
+        if ($id === null) {
+            return redirect()->to(base_url('admin/umkm/edu'))->with('error', 'ID tidak valid');
+        }
+
+        // Get the education data
+        $edu = $this->M_edu->find($id);
+        
+        if (!$edu) {
+            return redirect()->to(base_url('admin/umkm/edu'))->with('error', 'Data tidak ditemukan');
+        }
+
+        // Delete the record
+        $deleted = $this->M_edu->delete($id);
+        
+        if ($deleted) {
+            return redirect()->to(base_url('admin/umkm/edu'))->with('success', 'Data berhasil dihapus');
+        } else {
+            return redirect()->to(base_url('admin/umkm/edu'))->with('error', 'Gagal menghapus data');
+        }
     }
 
     public function edu_update($id)

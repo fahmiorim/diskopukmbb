@@ -501,7 +501,7 @@
                             <?php foreach ($social_media as $key => $value) { ?>
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox" name="sosmed_kode[]" value="<?= $value['sosmed_name']; ?>" <?php if ($value['sosmed_name'] == old($value['sosmed_kode'])) echo "checked" ?>>
+                                        <input class="form-check-input" type="checkbox" name="sosmed_kode[]" value="<?= $value['social_media_name']; ?>" <?= (in_array($value['social_media_name'], old('sosmed_kode', []))) ? 'checked' : '' ?>>
                                         <?= $value['social_media_name']; ?>
                                     </label>
                                 </div>

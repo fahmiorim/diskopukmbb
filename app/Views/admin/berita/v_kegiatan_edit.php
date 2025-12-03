@@ -9,29 +9,129 @@
                     <?= $title ?>
                 </div>
                 <div class="card-body">
+                    <?php if (session()->has('errors')) : ?>
+                        <div class="alert alert-danger">
+                            <ul class="mb-0">
+                                <?php foreach (session('errors') as $error) : ?>
+                                    <li><?= esc($error) ?></li>
+                                <?php endforeach ?>
+                            </ul>
+                        </div>
+                    <?php endif ?>
+                    
                     <!-- form start-->
-                    <form role="form" action="<?= base_url('admin/berita/kegiatan_update/' . $berita['id']); ?>" method="post" enctype="multipart/form-data">
+                    <form role="form" action="<?= base_url('admin/berita/kegiatan_update/' . $berita['id']); ?>" method="post" enctype="multipart/form-data" id="kegiatanForm">
+                        <?= csrf_field() ?>
                         <div class="form-group col-sm-10">
-                            <label>Judul Kegiatan</label>
-                            <input class="form-control" type="text" name="judul" value="<?= $berita['judul'] ?>" required>
+                            <label>Judul Kegiatan <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" name="judul" value="<?= old('judul', $berita['judul']) ?>" 
+                                   required minlength="5" maxlength="255"
+                                   oninvalid="this.setCustomValidity('Judul harus diisi (5-255 karakter)')"
+                                   oninput="this.setCustomValidity('')">
+                            <small class="form-text text-muted">Minimal 5 karakter, maksimal 255 karakter</small>
                         </div>
                         <div class="form-group col-sm-12">
-                            <label>Isi Kegiatan</label>
-                            <textarea name="isi_berita" id="editor" required><?= $berita['isi_berita'] ?></textarea>
+                            <label>Isi Kegiatan <span class="text-danger">*</span></label>
+                            <textarea name="isi_berita" id="editor" required
+                                     oninvalid="this.setCustomValidity('Isi berita tidak boleh kosong')"
+                                     oninput="this.setCustomValidity('')"><?= old('isi_berita', $berita['isi_berita']) ?></textarea>
                         </div>
                         <div class="form-group col-sm-8">
-                            <label>Gambar</label><br>
-                            <img src="<?= base_url('media/berita/' . $berita['gambar']); ?>" width="300px">
+                            <label>Gambar Saat Ini</label><br>
+                            <?php if (!empty($berita['gambar'])): ?>
+                                <img src="<?= base_url('media/berita/' . $berita['gambar']); ?>" class="img-thumbnail" style="max-width: 300px;">
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" name="hapus_gambar" id="hapusGambar" value="1">
+                                    <label class="form-check-label text-danger" for="hapusGambar">
+                                        Hapus gambar ini
+                                    </label>
+                                </div>
+                            <?php else: ?>
+                                <div class="alert alert-warning">Tidak ada gambar</div>
+                            <?php endif; ?>
                         </div>
                         <div class="form-group col-sm-8">
-                            <label>Ganti Gambar</label>
-                            <input type="file" class="form-control" name="gambar">
+                            <label>Ganti Gambar <small class="text-muted">(Kosongkan jika tidak ingin mengubah)</small></label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="gambar" name="gambar" 
+                                       accept="image/*" onchange="previewImage(this)">
+                                <label class="custom-file-label" for="gambar">Pilih file gambar</label>
+                                <small class="form-text text-muted">Format: JPG, JPEG, PNG (Maks. 2MB)</small>
+                            </div>
+                            <div class="mt-2">
+                                <img id="imagePreview" src="#" alt="Preview Gambar" style="max-width: 100%; max-height: 200px; display: none;">
+                            </div>
                         </div>
                         <br>
-                        <div class="card-action col-sm-3 ">
-                            <button type="submit" class="btn btn-primary btn-sm "> <i class="fas fa-paper-plane"></i> Update</button>
-                            <a href="<?= base_url('admin/berita/kegiatan') ?>" class="btn btn-danger btn-sm"> <i class="fa fa-reply"></i> Cancel</a>
+                        <div class="card-action col-sm-3">
+                            <button type="submit" class="btn btn-primary btn-sm" id="btnSubmit">
+                                <i class="fas fa-paper-plane"></i> Update
+                            </button>
+                            <a href="<?= base_url('admin/berita/kegiatan') ?>" class="btn btn-danger btn-sm">
+                                <i class="fa fa-reply"></i> Batal
+                            </a>
                         </div>
+                        
+                        <script>
+                        // Preview gambar sebelum diupload
+                        function previewImage(input) {
+                            const preview = document.getElementById('imagePreview');
+                            const fileLabel = document.querySelector('.custom-file-label');
+                            
+                            if (input.files && input.files[0]) {
+                                const file = input.files[0];
+                                const fileSize = file.size / 1024 / 1024; // in MB
+                                
+                                // Validasi ukuran file (maks 2MB)
+                                if (fileSize > 2) {
+                                    alert('Ukuran gambar tidak boleh lebih dari 2MB');
+                                    input.value = '';
+                                    preview.style.display = 'none';
+                                    fileLabel.textContent = 'Pilih file gambar';
+                                    return;
+                                }
+                                
+                                // Validasi tipe file
+                                if (!file.type.match('image.*')) {
+                                    alert('Hanya file gambar yang diizinkan');
+                                    input.value = '';
+                                    preview.style.display = 'none';
+                                    fileLabel.textContent = 'Pilih file gambar';
+                                    return;
+                                }
+                                
+                                const reader = new FileReader();
+                                
+                                reader.onload = function(e) {
+                                    preview.src = e.target.result;
+                                    preview.style.display = 'block';
+                                }
+                                
+                                reader.readAsDataURL(file);
+                                fileLabel.textContent = file.name;
+                            } else {
+                                preview.style.display = 'none';
+                                fileLabel.textContent = 'Pilih file gambar';
+                            }
+                        }
+                        
+                        // Submit form dengan loading state
+                        document.getElementById('kegiatanForm').addEventListener('submit', function(e) {
+                            const btn = document.getElementById('btnSubmit');
+                            btn.disabled = true;
+                            btn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Memperbarui...';
+                        });
+                        
+                        // Toggle hapus gambar
+                        document.getElementById('hapusGambar').addEventListener('change', function() {
+                            const fileInput = document.querySelector('input[name="gambar"]');
+                            if (this.checked) {
+                                fileInput.disabled = true;
+                            } else {
+                                fileInput.disabled = false;
+                            }
+                        });
+                        </script>
                     </form>
                 </div>
             </div>

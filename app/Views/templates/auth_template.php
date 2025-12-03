@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     
-    <title><?= $title ?? 'Login' ?> - DISKOP UKM Kabupaten Batu Bara</title>
+    <title><?= $title ?? 'Login' ?> - DISKOPUKM Kabupaten Batu Bara</title>
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="<?= base_url('media/settings/icon.png') ?>">

@@ -11,6 +11,15 @@ use App\Models\M_datakopukm;
 
 class Koperasi extends BaseController
 {
+    // Model properties
+    protected $M_profile;
+    protected $M_perizinan;
+    protected $M_settings;
+    protected $M_izin;
+    protected $M_edu;
+    protected $M_datakopukm;
+    protected $M_berita;
+    protected $db;
 
 
     public function __construct()
@@ -24,20 +33,31 @@ class Koperasi extends BaseController
         $this->db = \Config\Database::connect();
     }
 
+    public function bantuan()
+    {
+        $data = [
+            'title' => 'Bantuan',
+            'menu' => 'koperasi',
+            'title2' => $this->M_settings->first(),
+            'isi' => 'admin/koperasi/v_bantuan',
+        ];
+        return view('admin/layout/v_wrapper', $data);
+    }
+
 
     public function ckeditorUpload()
     {
+        $file = $this->request->getFile('upload');
+        
         $validated = $this->validate([
             'upload' => [
                 'uploaded[upload]',
                 'mime_in[upload,image/jpg,image/jpeg,image/gif,image/png]',
                 'max_size[upload,4098]',
-
             ],
         ]);
-        if ($validated) {
-
-            $file   = $this->request->getFile('upload');
+        
+        if ($validated && $file) {
             $fileName = $file->getRandomName();
             $file->move(ROOTPATH . '../public_html/public/media/umkm/', $fileName);
             $data = [
@@ -45,9 +65,10 @@ class Koperasi extends BaseController
                 'url' => base_url('public/media/umkm/' . $fileName),
             ];
         } else {
+            $error = $file ? $file->getErrorString() : 'No file uploaded';
             $data = [
                 'uploaded' => false,
-                'error' => $file,
+                'error' => ['message' => $error],
             ];
         }
         return $this->response->setJSON($data);
@@ -56,13 +77,15 @@ class Koperasi extends BaseController
     public function data()
     {
         $data = array(
-            'title' => 'Data UKM',
+            'title' => 'Data KOPERASI',
             'menu' => 'koperasi',
             'title2' => $this->M_settings->first(),
-            'datakopukm' => $this->M_datakopukm->findAll(),
+            'datakoperasi' => $this->M_datakopukm->findAll(),
             'isi' => 'admin/koperasi/v_lists',
         );
-        echo view('admin/layout/v_wrapper', $data);
+        
+        
+        return view('admin/layout/v_wrapper', $data);
     }
 
     public function data_tambah()
@@ -74,6 +97,179 @@ class Koperasi extends BaseController
             'isi' => 'admin/koperasi/v_tambah',
         );
         echo view('admin/layout/v_wrapper', $data);
+    }
+
+    public function data_save()
+    {
+        // Validate the form data
+        $validation = $this->validate([
+            'name_koperasi' => [
+                'label' => 'Nama Koperasi',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi'
+                ]
+            ],
+            'id_number' => [
+                'label' => 'ID Number',
+                'rules' => 'required|is_unique[3fi_datakopukm.id_number]',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                    'is_unique' => '{field} sudah terdaftar'
+                ]
+            ],
+            'address_koperasi' => [
+                'label' => 'Alamat',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi'
+                ]
+            ],
+            'districts_city_name' => [
+                'label' => 'Kecamatan',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi'
+                ]
+            ],
+            'email' => [
+                'label' => 'Email',
+                'rules' => 'valid_email',
+                'errors' => [
+                    'valid_email' => 'Format {field} tidak valid'
+                ]
+            ]
+        ]);
+
+        if (!$validation) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
+
+        // Prepare the data for insertion
+        $data = [
+            'name_koperasi' => $this->request->getPost('name_koperasi'),
+            'id_number' => $this->request->getPost('id_number'),
+            'address_koperasi' => $this->request->getPost('address_koperasi'),
+            'districts_city_name' => $this->request->getPost('districts_city_name'),
+            'phone_number' => $this->request->getPost('phone_number'),
+            'email' => $this->request->getPost('email'),
+            'nib_koperasi' => $this->request->getPost('nib_koperasi'),
+            'npwp_koperasi' => $this->request->getPost('npwp_koperasi'),
+            'business_status_name' => 'KOPERASI', // Set as KOPERASI
+            'created_at' => date('Y-m-d H:i:s')
+        ];
+
+        // Insert the data
+        $inserted = $this->M_datakopukm->insert($data);
+        
+        if ($inserted) {
+            return redirect()->to(base_url('admin/koperasi/data'))->with('success', 'Data koperasi berhasil ditambahkan');
+        } else {
+            return redirect()->back()->with('error', 'Gagal menambahkan data koperasi')->withInput();
+        }
+    }
+
+    public function data_edit($id_number = null)
+    {
+        if ($id_number === null) {
+            return redirect()->to(base_url('admin/koperasi/data'))->with('error', 'ID tidak valid');
+        }
+
+        $koperasi = $this->M_datakopukm->where('id_number', $id_number)->first();
+        
+        if (!$koperasi) {
+            return redirect()->to(base_url('admin/koperasi/data'))->with('error', 'Data koperasi tidak ditemukan');
+        }
+
+        $data = [
+            'title' => 'Edit Data Koperasi',
+            'menu' => 'koperasi',
+            'title2' => $this->M_settings->first(),
+            'koperasi' => $koperasi,
+            'isi' => 'admin/koperasi/v_edit',
+        ];
+        
+        return view('admin/layout/v_wrapper', $data);
+    }
+
+    public function data_update($id_number = null)
+    {
+        if ($id_number === null) {
+            return redirect()->to(base_url('admin/koperasi/data'))->with('error', 'ID tidak valid');
+        }
+
+        // Validate the form data
+        $validation = $this->validate([
+            'name_koperasi' => [
+                'label' => 'Nama Koperasi',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi'
+                ]
+            ],
+            'address_koperasi' => [
+                'label' => 'Alamat',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi'
+                ]
+            ],
+            'districts_city_name' => [
+                'label' => 'Kecamatan',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi'
+                ]
+            ],
+            'email' => [
+                'label' => 'Email',
+                'rules' => 'valid_email',
+                'errors' => [
+                    'valid_email' => 'Format {field} tidak valid'
+                ]
+            ]
+        ]);
+
+        if (!$validation) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
+
+        // Prepare the data for update
+        $data = [
+            'name_koperasi' => $this->request->getPost('name_koperasi'),
+            'address_koperasi' => $this->request->getPost('address_koperasi'),
+            'districts_city_name' => $this->request->getPost('districts_city_name'),
+            'phone_number' => $this->request->getPost('phone_number'),
+            'email' => $this->request->getPost('email'),
+            'nib_koperasi' => $this->request->getPost('nib_koperasi'),
+            'npwp_koperasi' => $this->request->getPost('npwp_koperasi'),
+            'updated_at' => date('Y-m-d H:i:s')
+        ];
+
+        // Update the data
+        $updated = $this->M_datakopukm->where('id_number', $id_number)->set($data)->update();
+        
+        if ($updated) {
+            return redirect()->to(base_url('admin/koperasi/data'))->with('success', 'Data koperasi berhasil diperbarui');
+        } else {
+            return redirect()->back()->with('error', 'Gagal memperbarui data koperasi')->withInput();
+        }
+    }
+
+    public function data_delete($id_number = null)
+    {
+        if ($id_number === null) {
+            return redirect()->to(base_url('admin/koperasi/data'))->with('error', 'ID tidak valid');
+        }
+
+        // Delete the data
+        $deleted = $this->M_datakopukm->where('id_number', $id_number)->delete();
+        
+        if ($deleted) {
+            return redirect()->to(base_url('admin/koperasi/data'))->with('success', 'Data koperasi berhasil dihapus');
+        } else {
+            return redirect()->back()->with('error', 'Gagal menghapus data koperasi');
+        }
     }
 
     public function perizinan()

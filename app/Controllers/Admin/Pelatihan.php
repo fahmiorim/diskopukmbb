@@ -64,14 +64,38 @@ class Pelatihan extends BaseController
 
     public function index()
     {
-        $data = array(
+        // Get all trainings
+        $trainings = $this->M_pelatihan->where('category', 'UMKM')
+                                     ->orderBy('start_date', 'DESC')
+                                     ->findAll();
+        
+        // Get participant counts for each training
+        $trainingData = [];
+        foreach ($trainings as $training) {
+            $participantCount = $this->M_pelatihan_peserta->where('training_id', $training['training_id'])
+                                                        ->countAllResults();
+            
+            $trainingData[] = [
+                'training_id' => $training['training_id'],
+                'training_title' => $training['training_title'],
+                'start_date' => $training['start_date'],
+                'finish_date' => $training['finish_date'],
+                'place' => $training['place'] ?? '',
+                'status' => $training['status'] ?? '',
+                'participant_count' => $participantCount
+                // Add other fields as needed
+            ];
+        }
+        
+        $data = [
             'title' => 'Pelatihan',
             'menu' => 'umkm',
             'title2' => $this->M_settings->first(),
-            'pelatihan' => $this->M_pelatihan->where('category', 'UMKM')->orderBy('start_date', 'Desc')->findAll(),
+            'pelatihan' => $trainingData,
             'isi' => 'admin/pelatihan/v_lists',
-        );
-        echo view('admin/layout/v_wrapper', $data);
+        ];
+        
+        return view('admin/layout/v_wrapper', $data);
     }
 
     public function tambah()

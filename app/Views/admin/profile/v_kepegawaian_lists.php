@@ -1,22 +1,47 @@
+<?php 
+helper('form'); // Load the form helper
+?>
 <!-- Begin Page Content -->
 <div class="container-fluid">
-    <h1 class="h3 mb-2 text-gray-800"><?= $title ?></h1>
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800"></h1>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h3 mb-0 text-gray-800"><?= $title ?></h1>
+        <a href="<?= base_url('admin/profile/kepegawaian_tambah') ?>" class="btn btn-primary">
+            <i class="fas fa-plus mr-2"></i>Tambah Pegawai
+        </a>
+    </div>
 
-    <!-- DataTales Example -->
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <a href="<?= base_url('admin/profile/kepegawaian_tambah') ?>" class="btn btn-primary">
-                <span class="icon text-white-50">
-                    <i class="fas fa-plus"></i>
-                </span>
-                <span class="text">Tambah Pegawai</span>
-            </a>
+    <?php if (session()->getFlashdata('success')): ?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="fas fa-check-circle mr-2"></i><?= session()->getFlashdata('success') ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
+    <?php endif; ?>
 
-        <div class="swal" data-swal="<?= session()->getFlashdata('success') ?>"></div>
+    <?php if (session()->getFlashdata('error')): ?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="fas fa-exclamation-circle mr-2"></i>
+            <?php 
+                $errors = session()->getFlashdata('error');
+                if (is_array($errors)) {
+                    echo '<ul class="mb-0">';
+                    foreach ($errors as $error) {
+                        echo '<li>' . esc($error) . '</li>';
+                    }
+                    echo '</ul>';
+                } else {
+                    echo esc($errors);
+                }
+            ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <?php endif; ?>
 
+    <div class="card shadow mb-4">
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -76,6 +101,58 @@
     </div>
 </div>
 <!-- /.container-fluid -->
+
+<!-- Delete Form -->
+<?= form_open('', ['id' => 'form-delete', 'class' => 'd-none']) ?>
+    <?= csrf_field() ?>
+    <input type="hidden" name="_method" value="DELETE">
+</form>
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Page level plugins -->
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Initialize DataTable
+        var table = $('#dataTable').DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.11.5/i18n/id.json"
+            },
+            "order": [[0, 'asc']],
+            "columnDefs": [
+                { "orderable": false, "targets": -1 } // Disable sorting on action column
+            ]
+        });
+
+        // SweetAlert for delete confirmation
+        $('.btn-delete').on('click', function() {
+            const id = $(this).data('id');
+            const name = $(this).data('name');
+            
+            Swal.fire({
+                title: 'Hapus Data',
+                html: `Apakah Anda yakin ingin menghapus <strong>${name}</strong>?`,
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: 'Ya, Hapus!',
+                cancelButtonText: 'Batal',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    const form = $('#form-delete');
+                    form.attr('action', `<?= base_url('admin/profile/kepegawaian_delete/') ?>${id}`);
+                    form.submit();
+                }
+            });
+        });
+    });
+</script>
 
 <!-- Modal Hapus -->
 <?php foreach ($pegawai as $key => $value) { ?>

@@ -176,7 +176,7 @@
                     <br>
                     <div class="swal-footer no-bd">
                         <a href="<?= base_url('admin/berita/emagazine_delete/' . $value['id']) ?>" type="button" class="btn btn-success">Gasss!!!</a></button>
-                        <a href="<?= base_url('admin/berita') ?>" type="button" class="btn btn-danger">Gak Jadi</a></button>
+                        <a href="<?= base_url('admin/berita/emagazine') ?>" type="button" class="btn btn-danger">Gak Jadi</a></button>
 
                     </div>
                 </div>

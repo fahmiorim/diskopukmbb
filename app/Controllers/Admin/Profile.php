@@ -10,6 +10,9 @@ use App\Models\M_jabatan;
 class Profile extends BaseController
 {
     protected $M_profile;
+    protected $M_kepegawaian;
+    protected $M_settings;
+    protected $M_jabatan;
 
     public function __construct()
     {
@@ -17,6 +20,23 @@ class Profile extends BaseController
         $this->M_kepegawaian = new M_kepegawaian();
         $this->M_settings = new M_settings();
         $this->M_jabatan = new M_jabatan();
+    }
+    
+    public function index()
+    {
+        $settings = $this->M_settings->first();
+        $data = [
+            'title' => 'Profil Saya',
+            'title2' => [
+                'instansi' => $settings['instansi'] ?? 'Instansi',
+                'aplikasi' => $settings['aplikasi'] ?? 'Aplikasi'
+            ],
+            'settings' => $settings,
+            'user' => $this->M_profile->where('id', session('id'))->first(),
+            'jabatan' => $this->M_jabatan->findAll()
+        ];
+        
+        return view('admin/profile/v_profile', $data);
     }
 
     public function ckeditorUpload()
@@ -183,7 +203,7 @@ class Profile extends BaseController
         }
         $this->M_profile->delete($id);
         session()->setFlashdata('success', 'Data Berhasil di Hapus');
-        return redirect()->to(base_url('admin/profile'));
+        return redirect()->to(base_url('admin/profile/menu'));
     }
 
     public function kepegawaian()

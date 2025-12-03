@@ -43,31 +43,18 @@
                     <tbody>
                         <?php $no = 1;
                         foreach ($pelatihan as $key => $value) { ?>
-
-                        <?php
-                            $training = $value['training_id'];
-                            $con = mysqli_connect("localhost", "diskopukm_user", "oyFABEpu2n", "diskopukm_db");
-                            $sql = "SELECT * from 3fi_pelatihan_peserta where training_id = '$training'";
-                            if ($result = mysqli_query($con, $sql)) {
-
-                                $peserta = mysqli_num_rows($result);
-                            }
-                            mysqli_close($con);
-                            ?>
-
                         <tr>
                             <td><?= $no++; ?></td>
                             <td><?= $value['training_title']; ?></td>
-                            <td><?= format_indo($value['start_date']) ?> s/d <?= format_indo($value['finish_date']) ?>
-                            </td>
-                            <td class="text-center"><?= $peserta ?></td>
-                            <td><?php
-                                    $tgl_now = date("Y-m-d");
-                                    if ($tgl_now > $value['finish_date']) {
-                                        echo '<button class="btn btn-danger btn-sm">Expired</button>';
-                                    } else {
-                                        echo '<button class="btn btn-success btn-sm">Aktif</button>';
-                                    } ?>
+                            <td><?= format_indo($value['start_date']) ?> s/d <?= format_indo($value['finish_date']) ?></td>
+                            <td class="text-center"><?= $value['participant_count'] ?? 0 ?></td>
+                            <td>
+                                <?php
+                                $tgl_now = date("Y-m-d");
+                                $status_class = ($tgl_now > $value['finish_date']) ? 'danger' : 'success';
+                                $status_text = ($tgl_now > $value['finish_date']) ? 'Expired' : 'Aktif';
+                                ?>
+                                <button class="btn btn-<?= $status_class ?> btn-sm"><?= $status_text ?></button>
                             </td>
                             <td width="150px">
                                 <div class="form-button-action text-center">

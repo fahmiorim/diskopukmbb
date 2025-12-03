@@ -51,14 +51,27 @@
                                 <td><?= $no++; ?></td>
                                 <td><?= $value['nama']; ?></td>
                                 <!-- <td><?= $value['posisi']; ?></td> -->
-                                <td class=""><img src="<?= base_url('./media/banner/' . $value['gambar']) ?>" width="200px"><br>
-                                <td><?= $value['status']; ?></td>
+                                <td class="text-center">
+                                    <?php if (!empty($value['gambar'])): ?>
+                                        <img src="<?= base_url('media/banner/' . $value['gambar']) ?>" class="img-thumbnail" style="max-width: 200px; max-height: 100px; object-fit: cover;">
+                                    <?php else: ?>
+                                        <span class="text-muted">Tidak ada gambar</span>
+                                    <?php endif; ?>
+                                </td>
+                                <td class="text-center">
+                                    <?php if ($value['status'] == 'Aktif'): ?>
+                                        <span class="badge badge-success"><?= $value['status'] ?></span>
+                                    <?php else: ?>
+                                        <span class="badge badge-secondary"><?= $value['status'] ?></span>
+                                    <?php endif; ?>
+                                </td>
                                 <td>
                                     <div class="form-button-action">
                                         <button type="button" title="Edit Data" data-toggle="modal" data-target="#edit<?= $value['id']; ?>" class="btn btn-primary btn-sm" data-original-title="Edit Task">
                                             <i class="fa fa-edit"></i>
                                         </button>
-                                        <button type="button" title="Hapus" data-toggle="modal" data-target="#delete<?= $value['id']; ?>" class="btn btn-danger btn-sm" data-original-title="Remove">
+                                        <button type="button" title="Hapus" class="btn btn-danger btn-sm" 
+                                                onclick="confirmDelete(<?= $value['id'] ?>, '<?= addslashes($value['nama']) ?>')">
                                             <i class="fa fa-times"></i>
                                         </button>
                                     </div>
@@ -74,6 +87,52 @@
     </div>
 </div>
 <!-- /.container-fluid -->
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    // Konfirmasi hapus
+    function confirmDelete(id, name) {
+        Swal.fire({
+            title: 'Apakah Anda yakin?',
+            text: `Anda akan menghapus banner "${name}"!`,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Ya, hapus!',
+            cancelButtonText: 'Batal',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = `<?= base_url('admin/banner/delete/') ?>${id}`;
+            }
+        });
+    }
+
+    // Inisialisasi DataTables
+    $(document).ready(function() {
+        $('#dataTable').DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.24/i18n/Indonesian.json"
+            },
+            "columnDefs": [
+                { "orderable": false, "targets": [4] } // Non-aktifkan sorting untuk kolom aksi
+            ]
+        });
+    });
+
+    // SweetAlert for success message
+    const swal = $('.swal').data('swal');
+    if (swal) {
+        Swal.fire({
+            title: 'Sukses',
+            text: swal,
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
+    }
+</script>
 
 <!-- Modal Tambah -->
 <div class="modal fade" id="tambah" tabindex="-1" role="dialog" aria-hidden="true">
@@ -92,6 +151,7 @@
                 <!-- form start-->
 
                 <form role="form" action="<?= base_url('admin/banner/tambah'); ?>" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+                    <?= csrf_field() ?>
                     <!-- <div class="form-group col-sm-6">
                         <label>Posisi</label>
                         <select class="form-control" type="text" name="posisi">
