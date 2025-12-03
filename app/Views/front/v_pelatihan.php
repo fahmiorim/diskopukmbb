@@ -10,7 +10,7 @@
                                                                                     $rowCount++; ?>
                 <div class="col-sm-<?php echo $bootstrapColWidth; ?> sm-margin-bottom-30">
                     <a href="<?= base_url() ?>/pelatihan/detail/<?= $row['training_title_seo']; ?>" rel="gallery1" class="fancybox img-hover-v1" title="<?= $row['training_title']; ?>">
-                        <span><img class="img-responsive" src="<?= base_url() ?>/public/media/pelatihan/<?= $row['gambar']; ?>"></span>
+                        <span><img class="img-responsive" src="<?= base_url() ?>/media/pelatihan/<?= $row['gambar']; ?>"></span>
 
                         <div class="text-center">
                             <h5><b><?= $row['training_title']; ?></b></h5>
