@@ -1,2 +1,8 @@
 .htaccess
 .env
+
+# Ignore uploaded media files
+/public/media/
+
+# Ignore writable directory
+/public/writable/
